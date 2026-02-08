@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import auth
+from app.routers import auth, categories, transactions, budgets, summary
 
 app = FastAPI(
     title="Budget App API",
@@ -8,6 +8,10 @@ app = FastAPI(
 )
 
 app.include_router(auth.router)
+app.include_router(categories.router)
+app.include_router(transactions.router)
+app.include_router(budgets.router)
+app.include_router(summary.router)
 
 
 @app.get("/")
