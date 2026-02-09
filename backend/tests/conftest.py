@@ -78,7 +78,7 @@ def test_category(db_session, test_user):
 def test_income_category(db_session, test_user):
     category = models.Category(
         name="Salary",
-        type="income",
+        type="inc
         user_id=test_user.id,
     )
     db_session.add(category)
